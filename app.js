@@ -136,16 +136,31 @@ function applyVote (ACC_KEY, ACC_NAME, author, permalink, weight, comment) {
 
                 const newpermlink = new Date().toISOString().replace(/[^a-zA-Z0-9]+/g, '').toLowerCase();
 
-                steem.broadcast.comment(ACC_KEY, author, permalink, ACC_NAME, newpermlink, '', comment, {
-                    tags: ['utopian.tip'],
-                    app: 'utopian-io'
-                }, function(err, result) {
-                    if (err) {
-                        console.log(err);
-                    } else {
-                        console.log('Commented on the post');
-                    }
-                });
+                if (weight === 0){
+                    steem.broadcast.comment(ACC_KEY, author, permalink, ACC_NAME, newpermlink, '', unvote_comment, {
+                        tags: ['utopian.tip'],
+                        app: 'utopian-io'
+                        }, function(err, result) {
+                            if (err) {
+                                console.log(err);
+                            } else {
+                                console.log('Commented about the unvote on the post');
+                            }
+                    });
+                }
+                else{
+                    steem.broadcast.comment(ACC_KEY, author, permalink, ACC_NAME, newpermlink, '', comment, {
+                        tags: ['utopian.tip'],
+                        app: 'utopian-io'
+                        }, function(err, result) {
+                            if (err) {
+                                console.log(err);
+                            } else {
+                                console.log('Commented on the post');
+                            }
+                    }); 
+                }
+                
             }
         });
     }catch(e){
