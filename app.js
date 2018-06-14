@@ -33,7 +33,12 @@ steem.api.streamTransactions('head', function(err, result) {
                         console.log(data);
                         weight = Math.round(data.weight * followed.weight_divider);
                         weight = weight > followed.max_weight ? followed.max_weight : weight;
-                        var comment = followed.comment.replace('{AUTHOR}', data.author).replace('{VOTER}', data.voter)
+                        if (weight === 0){
+                           var comment = followed.unvote_comment.replace('{AUTHOR}', data.author).replace('{VOTER}', data.voter) 
+                        }
+                        else {
+                            var comment = followed.comment.replace('{AUTHOR}', data.author).replace('{VOTER}', data.voter)
+                        }
                         setTimeout(function() {
                             StreamVote(data.author, data.permlink, weight, comment, followed.check_context)
                         }, 45000 * i);
@@ -136,31 +141,16 @@ function applyVote (ACC_KEY, ACC_NAME, author, permalink, weight, comment) {
 
                 const newpermlink = new Date().toISOString().replace(/[^a-zA-Z0-9]+/g, '').toLowerCase();
 
-                if (weight === 0){
-                    steem.broadcast.comment(ACC_KEY, author, permalink, ACC_NAME, newpermlink, '', unvote_comment, {
-                        tags: ['utopian.tip'],
-                        app: 'utopian-io'
-                        }, function(err, result) {
-                            if (err) {
-                                console.log(err);
-                            } else {
-                                console.log('Commented about the unvote on the post');
-                            }
-                    });
-                }
-                else{
-                    steem.broadcast.comment(ACC_KEY, author, permalink, ACC_NAME, newpermlink, '', comment, {
-                        tags: ['utopian.tip'],
-                        app: 'utopian-io'
-                        }, function(err, result) {
-                            if (err) {
-                                console.log(err);
-                            } else {
-                                console.log('Commented on the post');
-                            }
-                    }); 
-                }
-                
+                steem.broadcast.comment(ACC_KEY, author, permalink, ACC_NAME, newpermlink, '', comment, {
+                    tags: ['utopian.tip'],
+                    app: 'utopian-io'
+                }, function(err, result) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log('Commented on the post');
+                    }
+                });
             }
         });
     }catch(e){

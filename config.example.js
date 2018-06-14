@@ -11,7 +11,7 @@ const config = {
             weight_divider: 0.05,
             max_weight: 5000,
             comment: `#### Hi @{AUTHOR}!\n\nYour post was upvoted by utopian.io in cooperation with {VOTER} - supporting knowledge, innovation and technological advancement on the Steem Blockchain.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`,
-            unvote_comment: `#### Hi @{AUTHOR}!\n\nYour post was originally voted due to a mistake in our vote trail. Unfortunately, due to the nature of this action being unintentional, we've removed the upvote from your post. We apologize for the inconvenience.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`
+            unvote_comment: `#### Hi @{AUTHOR}!\n\nYour post was originally voted due to a mistake in our voting trail in cooperation with {VOTER}. Unfortunately, due to the nature of this action being unintentional, we've removed the upvote from your post. We apologize for the inconvenience.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`
             
         },
         {
@@ -20,7 +20,7 @@ const config = {
             weight_divider: 0.15,
             max_weight: 15000,
             comment: `#### Hi @{AUTHOR}!\n\nYour post was upvoted by utopian.io in cooperation with {VOTER} - supporting knowledge, innovation and technological advancement on the Steem Blockchain.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`,
-            unvote_comment: `#### Hi @{AUTHOR}!\n\nYour post was originally voted due to a mistake in our vote trail. Unfortunately, due to the nature of this action being unintentional, we've removed the upvote from your post. We apologize for the inconvenience.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`
+            unvote_comment: `#### Hi @{AUTHOR}!\n\nYour post was originally voted due to a mistake in our voting trail in cooperation with {VOTER}. Unfortunately, due to the nature of this action being unintentional, we've removed the upvote from your post. We apologize for the inconvenience.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`
 
         },
         {
@@ -29,7 +29,7 @@ const config = {
             weight_divider: 0.05,
             max_weight: 5000,
             comment: `#### Hi @{AUTHOR}!\n\nYour post was upvoted by utopian.io in cooperation with {VOTER} - supporting knowledge, innovation and technological advancement on the Steem Blockchain.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`,
-            unvote_comment: `#### Hi @{AUTHOR}!\n\nYour post was originally voted due to a mistake in our vote trail. Unfortunately, due to the nature of this action being unintentional, we've removed the upvote from your post. We apologize for the inconvenience.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`
+            unvote_comment: `#### Hi @{AUTHOR}!\n\nYour post was originally voted due to a mistake in our voting trail in cooperation with {VOTER}. Unfortunately, due to the nature of this action being unintentional, we've removed the upvote from your post. We apologize for the inconvenience.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`
 
         },
         {
@@ -38,7 +38,7 @@ const config = {
             weight_divider: 0.05,
             max_weight: 5000,
             comment: `#### Hi @{AUTHOR}!\n\nYour post was upvoted by utopian.io in cooperation with {VOTER} - supporting knowledge, innovation and technological advancement on the Steem Blockchain.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`,
-            unvote_comment: `#### Hi @{AUTHOR}!\n\nYour post was originally voted due to a mistake in our vote trail. Unfortunately, due to the nature of this action being unintentional, we've removed the upvote from your post. We apologize for the inconvenience.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`
+            unvote_comment: `#### Hi @{AUTHOR}!\n\nYour post was originally voted due to a mistake in our voting trail in cooperation with {VOTER}. Unfortunately, due to the nature of this action being unintentional, we've removed the upvote from your post. We apologize for the inconvenience.\n\n#### Contribute to Open Source with utopian.io\nLearn how to contribute on <a href="https://join.utopian.io">our website</a> and join the new open source economy.\n\n**Want to chat? Join the Utopian Community on Discord https://discord.gg/h52nFrV**`
         }
     ],
     labels: [
