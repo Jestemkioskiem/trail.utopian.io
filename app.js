@@ -28,16 +28,17 @@ steem.api.streamTransactions('head', function(err, result) {
                 var i;
                 for (i = 0; i < following.length; i++) {
                     const followed = following[i];
-
+                    
                     if (data.voter !== data.author && data.voter === followed.account || (data.voter === followed.account && followed.whitelisted === true)) {
                         console.log(data);
                         weight = Math.round(data.weight * followed.weight_divider);
                         weight = weight > followed.max_weight ? followed.max_weight : weight;
+                        let comment
                         if (weight === 0){
-                           var comment = followed.unvote_comment.replace('{AUTHOR}', data.author).replace('{VOTER}', data.voter) 
+                           comment = followed.unvote_comment.replace('{AUTHOR}', data.author).replace('{VOTER}', data.voter) 
                         }
                         else {
-                            var comment = followed.comment.replace('{AUTHOR}', data.author).replace('{VOTER}', data.voter)
+                            comment = followed.comment.replace('{AUTHOR}', data.author).replace('{VOTER}', data.voter)
                         }
                         setTimeout(function() {
                             StreamVote(data.author, data.permlink, weight, comment, followed.check_context)
